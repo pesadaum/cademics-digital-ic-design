@@ -1,5 +1,0 @@
-s1(19Jul2023:13:31:59):  xrun register.v register_test.v -gui -access +rw -input waves.tcl 
-s2(20Jul2023:15:56:12):  xrun register.v register_test.v -gui -access +rw -input waves.tcl 
-s3(20Jul2023:16:22:49):  xrun register.v register_test.v -access +rw -input waves.tcl 
-s4(24Jul2023:11:16:51):  xrun register.v register_test.v -access +rw -input waves.tcl 
-s5(24Jul2023:11:21:07):  xrun register.v register_test.v -access +rw -gui -input waves.tcl 
