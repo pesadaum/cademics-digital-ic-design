@@ -1,0 +1,16 @@
+xrun(64): 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s001: Started on Jul 25, 2023 at 14:47:31 -03
+xrun
+	driver_test.v
+	driver.v
+Loading snapshot worklib.driver_test:v .................... Done
+xcelium> source /home/cadence/cadence/installsXCELIUM2203/tools/xcelium/files/xmsimrc
+xcelium> run
+At time 1 data_en=0 data_in=xxxxxxxx data_out=zzzzzzzz
+At time 2 data_en=1 data_in=01010101 data_out=01010101
+At time 3 data_en=1 data_in=10101010 data_out=10101010
+TEST PASSED
+Simulation complete via $finish(1) at time 3 NS + 0
+./driver_test.v:40     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s001: Exiting on Jul 25, 2023 at 14:47:32 -03  (total: 00:00:01)

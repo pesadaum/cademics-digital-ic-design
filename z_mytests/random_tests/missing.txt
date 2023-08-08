@@ -1,0 +1,34 @@
+[x] -> How can you use a decaration from a package to define... !=== Import the package as part of module header
+[o] -> Which ones of the following choices are not part of florplanning === CTS, Route
+[o] -> Which jasper app increases our confidence === COV
+[o] -> arrange the steps-> !== Synth, Floorp, place, cts, post cts, route, post route, Design verif
+[o] -> Which of the following are the 2-state data types === Int, shortint, bit, byte
+[o] -> how do you reference package variable c1 ===  p1::c1, import P1::*
+[o] -> How can we be certain that Verification is complete === It's impossible
+[o] -> which of the following statements always_comb is INCORRECT === it can include timing
+[o] -> When one hears 7nm means what? === The stupid answer
+[o] -> Which of the following lines of code leadto error (packed struck) === NO issue
+[o] -> outpupt of enums-> enum1 value 32'b0, enum1 name A1
+[o] -> Which of the  following is unpacked array === integer
+[o] -> We can affect the ic static power === False
+[o] -> Which of the following module count incorrect  === U1,U2,U3
+[o] -> runtime warning unique case === all options except "data less than 5"
+[o] -> The bit datatype is 2-state and unsigned === True
+[o] -> A placed and routed design achieves timing specs ALSO electrical and SI === True
+[o] -> Which statement best describes Verification Execution complete === 100% coverage in context
+[o] -> How long is the typical des. and ver. cycle === 12 months
+[o] -> Which statement best describes the purpose of SVA assumptions === To limit the DUT
+[o] -> One can write proper SVA with no testbench and assumptions === True
+[o] -> What are the default values of 'data' and 'valid' === 'x, 0
+[o] -> if my design has 5 flops always 32 === False
+[o] -> Physical verif. includes === all but congestion analysis
+[o] -> Choose which line of code can lead to errors === 4, 5, 13, 17
+[o] -> Which of the following lines have error [other] === No errors
+[o] -> data_valid output trying to assign data to a localparam === Compilation error
+[o] -> sample_array[2:0][3:0]
+[o] -> When using formal, Coverage is little or no use === False
+[o] -> which die attachment method === Flipchip
+[o] -> a 'logic variable can only be multiply driven by === Multiple initial or always
+
+wirebonding === gold
+voltar na 1.65

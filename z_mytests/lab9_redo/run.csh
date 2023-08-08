@@ -1,0 +1,1 @@
+xrun *.v -access +rw -input waves.tcl
