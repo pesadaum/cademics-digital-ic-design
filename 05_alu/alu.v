@@ -34,7 +34,4 @@ module alu #(
 
   end
 
-
-
-
 endmodule

@@ -1,14 +1,16 @@
 module memory #(parameter AWIDTH = 5, DWIDTH = 8) (
-  input              clk, rd, wr,
-  input [AWIDTH-1:0] addr,
-  inout [DWIDTH-1:0] data
+  input wire              clk, rd, wr,
+  input wire [AWIDTH-1:0] addr,
+  inout wire [DWIDTH-1:0] data
 );
 
-  always @(posedge clk) begin
-    if(rd) begin
-      data[addr] = 1;
-    end
+  reg [DWIDTH-1:0] mem[0:2**AWIDTH-1];
 
+  always @(posedge clk) begin
+    if(wr) mem[addr] = data;
   end
+  
+  // first condition prevents reading and writing at the same time
+  assign data = (wr && rd) ? 'bZ : rd ? mem[addr] : 'bZ;
 
 endmodule

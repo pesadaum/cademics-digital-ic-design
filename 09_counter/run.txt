@@ -1,0 +1,16 @@
+TOOL:	xrun(64)	22.03-s001: Started on Aug 17, 2023 at 11:25:15 -03
+xrun(64): 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+Loading snapshot worklib.counter_test:v .................... Done
+xcelium> source /home/cadence/cadence/installsXCELIUM2203/tools/xcelium/files/xmsimrc
+xcelium> run
+At time 20 rst=0 load=1 enab=1 cnt_in=10101 cnt_out=10101
+At time 30 rst=0 load=1 enab=1 cnt_in=01010 cnt_out=01010
+At time 40 rst=0 load=1 enab=1 cnt_in=11111 cnt_out=11111
+At time 50 rst=1 load=1 enab=1 cnt_in=11111 cnt_out=00000
+At time 60 rst=0 load=1 enab=1 cnt_in=11111 cnt_out=11111
+At time 70 rst=0 load=0 enab=1 cnt_in=11111 cnt_out=00000
+TEST PASSED
+Simulation complete via $finish(1) at time 70 NS + 0
+./counter_test.v:51     $finish;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s001: Exiting on Aug 17, 2023 at 11:25:15 -03  (total: 00:00:00)

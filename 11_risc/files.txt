@@ -1,0 +1,9 @@
+../03_addr_mux/multiplexor.v
+../04_data_driver/driver.v
+../05_alu/alu.v
+../06_controller/controller.v
+../07_register/register.v
+../08_memory/memory.v
+../09_counter/counter.v
+./risc.v
+./risc_test.v

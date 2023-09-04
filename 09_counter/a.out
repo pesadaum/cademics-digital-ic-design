@@ -1,0 +1,78 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0-132-gb2f2414f4)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+S_0x561b426d5d80 .scope module, "counter" "counter" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "enab";
+    .port_info 1 /INPUT 1 "load";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /INPUT 1 "rst";
+    .port_info 4 /INPUT 5 "cnt_in";
+    .port_info 5 /OUTPUT 5 "cnt_out";
+P_0x561b426d5f10 .param/l "WIDTH" 0 2 1, +C4<00000000000000000000000000000101>;
+o0x7f81c7ff8018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x561b426d6050_0 .net "clk", 0 0, o0x7f81c7ff8018;  0 drivers
+v0x561b4271e9e0_0 .var "cnt_aux", 4 0;
+o0x7f81c7ff8078 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v0x561b4271eac0_0 .net "cnt_in", 4 0, o0x7f81c7ff8078;  0 drivers
+v0x561b4271eb80_0 .var "cnt_out", 4 0;
+o0x7f81c7ff80d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x561b4271ec60_0 .net "enab", 0 0, o0x7f81c7ff80d8;  0 drivers
+o0x7f81c7ff8108 .functor BUFZ 1, C4<z>; HiZ drive
+v0x561b4271ed70_0 .net "load", 0 0, o0x7f81c7ff8108;  0 drivers
+o0x7f81c7ff8138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x561b4271ee30_0 .net "rst", 0 0, o0x7f81c7ff8138;  0 drivers
+E_0x561b4270e950 .event posedge, v0x561b426d6050_0;
+E_0x561b426f8c20/0 .event edge, v0x561b4271ee30_0, v0x561b4271ed70_0, v0x561b4271eac0_0, v0x561b4271ec60_0;
+E_0x561b426f8c20/1 .event edge, v0x561b4271eb80_0;
+E_0x561b426f8c20 .event/or E_0x561b426f8c20/0, E_0x561b426f8c20/1;
+    .scope S_0x561b426d5d80;
+T_0 ;
+    %wait E_0x561b426f8c20;
+    %load/vec4 v0x561b4271ee30_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 5;
+    %store/vec4 v0x561b4271e9e0_0, 0, 5;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x561b4271ed70_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0x561b4271eac0_0;
+    %store/vec4 v0x561b4271e9e0_0, 0, 5;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v0x561b4271ec60_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %load/vec4 v0x561b4271eb80_0;
+    %addi 1, 0, 5;
+    %store/vec4 v0x561b4271e9e0_0, 0, 5;
+    %jmp T_0.5;
+T_0.4 ;
+    %load/vec4 v0x561b4271eb80_0;
+    %store/vec4 v0x561b4271e9e0_0, 0, 5;
+T_0.5 ;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0x561b426d5d80;
+T_1 ;
+    %wait E_0x561b4270e950;
+    %load/vec4 v0x561b4271e9e0_0;
+    %assign/vec4 v0x561b4271eb80_0, 0;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/pesadaum/work/cademics/src/09_counter/counter.v";

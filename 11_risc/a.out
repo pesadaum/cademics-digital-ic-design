@@ -1,0 +1,27 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)" "(v11_0-132-gb2f2414f4)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+S_0x560baf865760 .scope module, "risc" "risc" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /OUTPUT 1 "halt";
+P_0x560baf863980 .param/l "AWIDTH" 1 2 8, +C4<00000000000000000000000000000101>;
+P_0x560baf8639c0 .param/l "DWIDTH" 1 2 8, +C4<00000000000000000000000000001000>;
+o0x7f27cadc1018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x560baf865920_0 .net "clk", 0 0, o0x7f27cadc1018;  0 drivers
+o0x7f27cadc1048 .functor BUFZ 1, C4<z>; HiZ drive
+v0x560baf88cad0_0 .net "halt", 0 0, o0x7f27cadc1048;  0 drivers
+o0x7f27cadc1078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x560baf88cb90_0 .net "rst", 0 0, o0x7f27cadc1078;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "/home/pesadaum/work/cademics/src/11_risc/risc.v";

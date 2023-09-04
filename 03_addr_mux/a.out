@@ -7,41 +7,40 @@
 :vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
 :vpi_module "/usr/local/lib/ivl/va_math.vpi";
-S_0x56526c1a6df0 .scope module, "multiplexor" "multiplexor" 2 1;
+S_0x5649b2302df0 .scope module, "multiplexor" "multiplexor" 2 1;
  .timescale 0 0;
-    .port_info 0 /INPUT 5 "in0";
-    .port_info 1 /INPUT 5 "in1";
-    .port_info 2 /INPUT 1 "sel";
+    .port_info 0 /INPUT 1 "sel";
+    .port_info 1 /INPUT 5 "in0";
+    .port_info 2 /INPUT 5 "in1";
     .port_info 3 /OUTPUT 5 "mux_out";
-    .port_info 4 /NODIR 0 "unnamed";
-P_0x56526c1a6f80 .param/l "WIDTH" 0 2 3, +C4<00000000000000000000000000000101>;
-o0x7f2207c86018 .functor BUFZ 5, C4<zzzzz>; HiZ drive
-v0x56526c1a7070_0 .net "in0", 4 0, o0x7f2207c86018;  0 drivers
-o0x7f2207c86048 .functor BUFZ 5, C4<zzzzz>; HiZ drive
-v0x56526c1eddf0_0 .net "in1", 4 0, o0x7f2207c86048;  0 drivers
-v0x56526c1eded0_0 .var "mux_out", 4 0;
-o0x7f2207c860a8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x56526c1edfc0_0 .net "sel", 0 0, o0x7f2207c860a8;  0 drivers
-E_0x56526c1df550 .event edge, v0x56526c1edfc0_0, v0x56526c1eddf0_0, v0x56526c1a7070_0;
-    .scope S_0x56526c1a6df0;
+P_0x5649b2302f80 .param/l "WIDTH" 0 2 1, +C4<00000000000000000000000000000101>;
+o0x7fb557e3c018 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v0x5649b23030e0_0 .net "in0", 4 0, o0x7fb557e3c018;  0 drivers
+o0x7fb557e3c048 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v0x5649b2349d50_0 .net "in1", 4 0, o0x7fb557e3c048;  0 drivers
+v0x5649b2349e30_0 .var "mux_out", 4 0;
+o0x7fb557e3c0a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5649b2349f20_0 .net "sel", 0 0, o0x7fb557e3c0a8;  0 drivers
+E_0x5649b233b520 .event edge, v0x5649b2349f20_0, v0x5649b2349d50_0, v0x5649b23030e0_0;
+    .scope S_0x5649b2302df0;
 T_0 ;
-    %wait E_0x56526c1df550;
-    %load/vec4 v0x56526c1edfc0_0;
+    %wait E_0x5649b233b520;
+    %load/vec4 v0x5649b2349f20_0;
     %flag_set/vec4 8;
     %jmp/0 T_0.0, 8;
-    %load/vec4 v0x56526c1eddf0_0;
+    %load/vec4 v0x5649b2349d50_0;
     %jmp/1 T_0.1, 8;
 T_0.0 ; End of true expr.
-    %load/vec4 v0x56526c1a7070_0;
+    %load/vec4 v0x5649b23030e0_0;
     %jmp/0 T_0.1, 8;
  ; End of false expr.
     %blend;
 T_0.1;
-    %store/vec4 v0x56526c1eded0_0, 0, 5;
+    %store/vec4 v0x5649b2349e30_0, 0, 5;
     %jmp T_0;
     .thread T_0, $push;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
     "<interactive>";
-    "/home/pesadaum/work/cademics/src/3_addr_mux/lab3-mux/multiplexor.v";
+    "/home/pesadaum/work/cademics/src/03_addr_mux/multiplexor.v";

@@ -146,7 +146,4 @@ module controller (
         end
     endcase
   end
-
-
-
 endmodule
